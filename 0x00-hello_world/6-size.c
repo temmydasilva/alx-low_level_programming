@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - The main function always returns an integer value or void
+ * main - main function
  * 
  * Return: 0 on success
  */
