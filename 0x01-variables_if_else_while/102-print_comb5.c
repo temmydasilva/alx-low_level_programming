@@ -4,13 +4,14 @@
 
 /**
  * main - the main function of this task
- * return: 0
+ * Return: always 0
  */
 
 int main(void)
 
 {
 	int p, q;
+
 	for (p = 0; p <= 98; p++)
 	{
 		for (q = p + 1; q <= 99; q++)
