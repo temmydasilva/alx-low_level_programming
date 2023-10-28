@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * int binary_to_uint - converts a binary number to an unsigned int
+ * binary_to_uint - converts a binary number to an unsigned int
  * @b: pointer to the string containing a binary number
  * Return: unsigned int with decimal value of binary number or 0 if error
  */
