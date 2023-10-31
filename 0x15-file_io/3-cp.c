@@ -10,7 +10,7 @@
 
 int main(int arg, char *argv)
 {
-	int f0, fi, res0, res1;
+	int f0, f1, res0, res1;
 	char *buffer;
 
 	if (argc != 3)
@@ -52,8 +52,42 @@ void error_98(int f0, char *buffer, char *argv)
 {
 	if (f0 < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: cant read from file %s\n", argv);
+		dprintf(STDERR_FILENO, "Error: can't read from file %s\n", argv);
 		free(buffer);
 		exit(98);
+	}
+}
+
+/**
+ * error_99 - checks error 99
+ * @f0: value to check
+ * @buffer: the buffer
+ * @argv: argument
+ */
+
+void error_99(int f0, char *buffer, char *argv)
+{
+	if (f0 < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv);
+		free(buffer);
+		exit(99);
+	}
+}
+
+/**
+ * error_99 - checks error 100
+ * @f0: value to check
+ * @buffer: the buffer
+ * @argv: argument
+ */
+
+void error_100(int f0, char *buffer)
+{
+	if (f0 < 0)
+        {
+		dprintf(STDERR_FILENO, "Error: can't close fd %i\n", f0);
+		free(buffer);
+		exit(100);
 	}
 }
